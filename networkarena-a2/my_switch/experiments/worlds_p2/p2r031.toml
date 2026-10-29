@@ -1,0 +1,135 @@
+[world]
+name = "p2rand-031"
+seed = 31
+version = 1
+family = "random"
+diameter = 5
+generator = 2
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 95.0
+buffer_budget_packets = 40
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+as_id = 0
+
+[[switch]]
+id = 1
+as_id = 0
+
+[[switch]]
+id = 2
+as_id = 0
+
+[[switch]]
+id = 3
+as_id = 0
+
+[[switch]]
+id = 4
+as_id = 0
+
+[[switch]]
+id = 5
+as_id = 0
+
+[[link]]
+a = 0
+b = 1
+capacity_mbps = 10
+
+[[link]]
+a = 0
+b = 3
+capacity_mbps = 10
+
+[[link]]
+a = 0
+b = 5
+capacity_mbps = 10
+
+[[link]]
+a = 1
+b = 2
+capacity_mbps = 10
+
+[[link]]
+a = 1
+b = 3
+capacity_mbps = 10
+
+[[link]]
+a = 1
+b = 4
+capacity_mbps = 5
+
+[[link]]
+a = 2
+b = 3
+capacity_mbps = 10
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.0.222.0/24"
+
+[[app]]
+id = 101
+switch = 1
+prefix = "10.0.9.0/24"
+preset = "steam"
+law = "rate_match"
+peer = 105
+
+[[app]]
+id = 102
+switch = 2
+prefix = "10.0.238.0/24"
+
+[[app]]
+id = 103
+switch = 3
+prefix = "10.0.212.0/24"
+preset = "amazon"
+law = "rate_match"
+rate_mbps = 7.528
+peer = 102
+on_ms = 10000
+off_ms = 8000
+start_ms = 1442
+
+[[app]]
+id = 104
+switch = 4
+prefix = "10.0.249.0/24"
+preset = "steam"
+law = "rate_match"
+peer = 100
+
+[[app]]
+id = 105
+switch = 5
+prefix = "10.0.72.0/24"
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[floors]
+goodput_pct = 50.0
+utilization_pct = 55.0
+share_pct = 40.0
+window_ms = 1000
+settling_ms = 2000
+bottlenecks = [
+    [1, 4],
+]
+detour_hops = 2

@@ -1,0 +1,235 @@
+[world]
+name = "p2rand-015"
+seed = 15
+version = 1
+family = "random"
+diameter = 5
+generator = 2
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 95.0
+buffer_budget_packets = 40
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+as_id = 0
+
+[[switch]]
+id = 1
+as_id = 0
+
+[[switch]]
+id = 2
+as_id = 0
+
+[[switch]]
+id = 3
+as_id = 0
+
+[[switch]]
+id = 4
+as_id = 0
+
+[[switch]]
+id = 5
+as_id = 0
+
+[[switch]]
+id = 6
+as_id = 0
+
+[[switch]]
+id = 7
+as_id = 0
+
+[[switch]]
+id = 8
+as_id = 0
+
+[[switch]]
+id = 9
+as_id = 0
+
+[[switch]]
+id = 10
+as_id = 0
+
+[[switch]]
+id = 11
+as_id = 0
+
+[[link]]
+a = 0
+b = 1
+capacity_mbps = 10
+
+[[link]]
+a = 0
+b = 5
+capacity_mbps = 10
+
+[[link]]
+a = 0
+b = 9
+capacity_mbps = 10
+
+[[link]]
+a = 1
+b = 2
+capacity_mbps = 10
+
+[[link]]
+a = 2
+b = 3
+capacity_mbps = 10
+
+[[link]]
+a = 3
+b = 4
+capacity_mbps = 10
+
+[[link]]
+a = 4
+b = 5
+capacity_mbps = 10
+
+[[link]]
+a = 6
+b = 7
+capacity_mbps = 10
+
+[[link]]
+a = 6
+b = 11
+capacity_mbps = 10
+
+[[link]]
+a = 7
+b = 8
+capacity_mbps = 10
+
+[[link]]
+a = 8
+b = 9
+capacity_mbps = 2
+
+[[link]]
+a = 9
+b = 10
+capacity_mbps = 10
+
+[[link]]
+a = 10
+b = 11
+capacity_mbps = 10
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.0.31.0/24"
+
+[[app]]
+id = 101
+switch = 1
+prefix = "10.0.35.0/24"
+preset = "netflix"
+law = "rate_match"
+rate_mbps = 3.946
+peer = 103
+
+[[app]]
+id = 102
+switch = 2
+prefix = "10.0.81.0/24"
+
+[[app]]
+id = 103
+switch = 3
+prefix = "10.0.63.0/24"
+
+[[app]]
+id = 104
+switch = 4
+prefix = "10.0.168.0/24"
+
+[[app]]
+id = 105
+switch = 5
+prefix = "10.0.176.0/24"
+
+[[app]]
+id = 106
+switch = 6
+prefix = "10.0.100.0/24"
+
+[[app]]
+id = 107
+switch = 7
+prefix = "10.0.240.0/24"
+preset = "steam"
+law = "rate_match"
+peer = 105
+
+[[app]]
+id = 108
+switch = 8
+prefix = "10.0.29.0/24"
+preset = "amazon"
+law = "aimd"
+rate_mbps = 7.811
+peer = 100
+on_ms = 10000
+off_ms = 9000
+start_ms = 1061
+
+[[app]]
+id = 109
+switch = 9
+prefix = "10.0.56.0/24"
+preset = "jane_street"
+law = "rate_match"
+rate_mbps = 0.087
+peer = 106
+size_bytes = 200
+
+[[app]]
+id = 110
+switch = 10
+prefix = "10.0.236.0/24"
+preset = "steam"
+law = "rate_match"
+peer = 104
+
+[[app]]
+id = 111
+switch = 11
+prefix = "10.0.82.0/24"
+preset = "amazon"
+law = "rate_match"
+rate_mbps = 7.531
+peer = 102
+on_ms = 8000
+off_ms = 10000
+start_ms = 2103
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[floors]
+goodput_pct = 50.0
+utilization_pct = 55.0
+share_pct = 40.0
+window_ms = 1000
+settling_ms = 2000
+bottlenecks = [
+    [8, 9],
+]
+detour_hops = 2

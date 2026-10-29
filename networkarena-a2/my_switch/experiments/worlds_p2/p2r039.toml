@@ -1,0 +1,236 @@
+[world]
+name = "p2rand-039"
+seed = 39
+version = 1
+family = "random"
+diameter = 5
+generator = 2
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 95.0
+buffer_budget_packets = 40
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+as_id = 0
+
+[[switch]]
+id = 1
+as_id = 0
+
+[[switch]]
+id = 2
+as_id = 0
+
+[[switch]]
+id = 3
+as_id = 0
+
+[[switch]]
+id = 4
+as_id = 0
+
+[[switch]]
+id = 5
+as_id = 0
+
+[[switch]]
+id = 6
+as_id = 0
+
+[[switch]]
+id = 7
+as_id = 0
+
+[[switch]]
+id = 8
+as_id = 0
+
+[[switch]]
+id = 9
+as_id = 0
+
+[[switch]]
+id = 10
+as_id = 0
+
+[[switch]]
+id = 11
+as_id = 0
+
+[[link]]
+a = 0
+b = 1
+capacity_mbps = 10
+
+[[link]]
+a = 0
+b = 11
+capacity_mbps = 10
+
+[[link]]
+a = 1
+b = 2
+capacity_mbps = 10
+
+[[link]]
+a = 2
+b = 3
+capacity_mbps = 10
+
+[[link]]
+a = 3
+b = 4
+capacity_mbps = 10
+
+[[link]]
+a = 4
+b = 5
+capacity_mbps = 4
+
+[[link]]
+a = 5
+b = 6
+capacity_mbps = 10
+
+[[link]]
+a = 6
+b = 7
+capacity_mbps = 10
+
+[[link]]
+a = 7
+b = 8
+capacity_mbps = 10
+
+[[link]]
+a = 8
+b = 9
+capacity_mbps = 10
+
+[[link]]
+a = 9
+b = 10
+capacity_mbps = 10
+
+[[link]]
+a = 10
+b = 11
+capacity_mbps = 10
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.0.212.0/24"
+preset = "amazon"
+law = "aimd"
+rate_mbps = 7.056
+peer = 108
+on_ms = 8000
+off_ms = 8000
+start_ms = 1280
+
+[[app]]
+id = 101
+switch = 1
+prefix = "10.0.110.0/24"
+preset = "fortnite"
+law = "aimd"
+rate_mbps = 0.368
+peer = 105
+size_bytes = 200
+
+[[app]]
+id = 102
+switch = 2
+prefix = "10.0.118.0/24"
+preset = "steam"
+law = "aimd"
+peer = 109
+
+[[app]]
+id = 103
+switch = 3
+prefix = "10.0.57.0/24"
+preset = "jane_street"
+law = "aimd"
+rate_mbps = 0.114
+peer = 106
+size_bytes = 200
+
+[[app]]
+id = 104
+switch = 4
+prefix = "10.0.158.0/24"
+preset = "amazon"
+law = "aimd"
+rate_mbps = 7.477
+peer = 111
+on_ms = 10000
+off_ms = 10000
+start_ms = 1398
+
+[[app]]
+id = 105
+switch = 5
+prefix = "10.0.40.0/24"
+preset = "fortnite"
+law = "rate_match"
+rate_mbps = 0.368
+peer = 101
+size_bytes = 200
+
+[[app]]
+id = 106
+switch = 6
+prefix = "10.0.126.0/24"
+
+[[app]]
+id = 107
+switch = 7
+prefix = "10.0.39.0/24"
+preset = "steam"
+law = "aimd"
+peer = 110
+
+[[app]]
+id = 108
+switch = 8
+prefix = "10.0.116.0/24"
+
+[[app]]
+id = 109
+switch = 9
+prefix = "10.0.15.0/24"
+
+[[app]]
+id = 110
+switch = 10
+prefix = "10.0.108.0/24"
+
+[[app]]
+id = 111
+switch = 11
+prefix = "10.0.197.0/24"
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[floors]
+goodput_pct = 50.0
+utilization_pct = 55.0
+share_pct = 40.0
+window_ms = 1000
+settling_ms = 2000
+bottlenecks = [
+    [4, 5],
+]
+detour_hops = 2
