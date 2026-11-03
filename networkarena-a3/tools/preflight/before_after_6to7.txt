@@ -1,0 +1,16 @@
+cca_est     truth6: fail=0 log= 17349B report_wire= 24911B in 137 pkts, adverts=   0B, reached=92%, events=100%, switches_heard=15, cca_rec=52(trace 14)
+cca_est     truth7: fail=0 log= 17605B report_wire= 24934B in 137 pkts, adverts=   0B, reached=92%, events=100%, switches_heard=15, cca_rec=73(trace 13)
+cca_rich    truth6: fail=0 log= 26470B report_wire= 49050B in 470 pkts, adverts=   0B, reached=99%, events=100%, switches_heard=15, cca_rec=99(trace 31)
+cca_rich    truth7: fail=0 log= 27046B report_wire= 49427B in 471 pkts, adverts=   0B, reached=99%, events=100%, switches_heard=15, cca_rec=135(trace 31)
+cca_tiny    truth6: fail=0 log= 17002B report_wire= 24216B in 135 pkts, adverts=   0B, reached=94%, events=96%, switches_heard=15, cca_rec=51(trace 14)
+cca_tiny    truth7: fail=0 log= 17261B report_wire= 24235B in 135 pkts, adverts=   0B, reached=94%, events=96%, switches_heard=15, cca_rec=72(trace 13)
+eggs_est    truth6: fail=0 log= 17139B report_wire= 25072B in 146 pkts, adverts=1148B, reached=94%, events=98%, switches_heard=15, cca_rec=48(trace 10) found 18/20 | consistency: 14/15
+eggs_est    truth7: fail=0 log= 17438B report_wire= 25080B in 146 pkts, adverts=1148B, reached=94%, events=98%, switches_heard=15, cca_rec=72(trace 10) found 18/20 | consistency: 14/15
+eggs_rich   truth6: fail=0 log= 21084B report_wire= 41917B in 438 pkts, adverts=1148B, reached=99%, events=100%, switches_heard=15, cca_rec=62(trace 15) found 20/20 | consistency: 14/15
+eggs_rich   truth7: fail=0 log= 21564B report_wire= 42109B in 438 pkts, adverts=1148B, reached=99%, events=100%, switches_heard=15, cca_rec=92(trace 15) found 20/20 | consistency: 14/15
+eggs_tiny   truth6: fail=0 log= 16084B report_wire= 23672B in 142 pkts, adverts=1025B, reached=93%, events=98%, switches_heard=15, cca_rec=42(trace 8) found 18/20 | consistency: 14/15
+eggs_tiny   truth7: fail=0 log= 16378B report_wire= 23678B in 142 pkts, adverts=1025B, reached=93%, events=98%, switches_heard=15, cca_rec=63(trace 8) found 18/20 | consistency: 14/15
+runb_est    truth6: fail=0 log= 17310B report_wire= 24827B in 142 pkts, adverts=1517B, reached=92%, events=100%, switches_heard=15, cca_rec=63(trace 18)
+runb_est    truth7: fail=0 log= 17572B report_wire= 24851B in 142 pkts, adverts=1517B, reached=92%, events=100%, switches_heard=15, cca_rec=89(trace 18)
+runb_rich   truth6: fail=0 log= 23228B report_wire= 44187B in 452 pkts, adverts=1517B, reached=99%, events=100%, switches_heard=15, cca_rec=65(trace 19)
+runb_rich   truth7: fail=0 log= 23660B report_wire= 44436B in 453 pkts, adverts=1517B, reached=99%, events=100%, switches_heard=15, cca_rec=92(trace 19)

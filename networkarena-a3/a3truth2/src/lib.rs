@@ -21,7 +21,19 @@ use fmt::*;
 #[cfg(feature = "practice")]
 pub const LOGGER: u32 = 1;
 #[cfg(not(feature = "practice"))]
-pub const LOGGER: u32 = 7;
+pub const LOGGER: u32 = match option_env!("A3_LOGGER") {
+    Some(s) => {
+        let b = s.as_bytes();
+        let mut v = 0u32;
+        let mut i = 0;
+        while i < b.len() {
+            v = v * 10 + (b[i] - b'0') as u32;
+            i += 1;
+        }
+        v
+    }
+    None => 7,
+};
 
 const APP_PORT: u16 = 100;
 

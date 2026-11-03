@@ -1,0 +1,21 @@
+[workspace]
+
+[package]
+name = "a3truth3"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+# Build for the 6-switch practice network (logger = switch 1 instead of 7).
+practice = []
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+switch_program_sdk = { path = "../switch_program_sdk" }
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true

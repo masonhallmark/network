@@ -1,0 +1,76 @@
+# The practice claim runs for egg 32 (link 1-6 flaps), and their answers. Generated: do not edit.
+
+[[egg]]
+n = 32
+name = "The flapping link"
+category = "Failure"
+
+[[run]]
+egg = 32
+run = 1
+on = true
+load = 1.0
+world = "run01.toml"
+
+[[run]]
+egg = 32
+run = 2
+on = true
+load = 1.25
+world = "run02.toml"
+
+[[run]]
+egg = 32
+run = 3
+on = true
+load = 1.5
+world = "run03.toml"
+
+[[run]]
+egg = 32
+run = 4
+on = true
+load = 1.0
+world = "run04.toml"
+
+[[run]]
+egg = 32
+run = 5
+on = true
+load = 1.25
+world = "run05.toml"
+
+[[run]]
+egg = 32
+run = 6
+on = false
+load = 1.0
+world = "run06.toml"
+
+[[run]]
+egg = 32
+run = 7
+on = false
+load = 1.25
+world = "run07.toml"
+
+[[run]]
+egg = 32
+run = 8
+on = false
+load = 1.5
+world = "run08.toml"
+
+[[run]]
+egg = 32
+run = 9
+on = false
+load = 1.0
+world = "run09.toml"
+
+[[run]]
+egg = 32
+run = 10
+on = false
+load = 1.5
+world = "run10.toml"

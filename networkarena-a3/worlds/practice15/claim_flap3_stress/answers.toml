@@ -1,0 +1,286 @@
+# The practice claim runs for egg 32 (link 1-6 flaps), and their answers. Generated: do not edit.
+
+[[egg]]
+n = 32
+name = "The flapping link"
+category = "Failure"
+
+[[run]]
+egg = 32
+run = 1
+on = false
+load = 1.75
+world = "run01.toml"
+
+[[run]]
+egg = 32
+run = 2
+on = false
+load = 1.25
+world = "run02.toml"
+
+[[run]]
+egg = 32
+run = 3
+on = false
+load = 1.0
+world = "run03.toml"
+
+[[run]]
+egg = 32
+run = 4
+on = false
+load = 1.75
+world = "run04.toml"
+
+[[run]]
+egg = 32
+run = 5
+on = false
+load = 2.0
+world = "run05.toml"
+
+[[run]]
+egg = 32
+run = 6
+on = false
+load = 1.5
+world = "run06.toml"
+
+[[run]]
+egg = 32
+run = 7
+on = true
+load = 1.75
+world = "run07.toml"
+
+[[run]]
+egg = 32
+run = 8
+on = false
+load = 1.5
+world = "run08.toml"
+
+[[run]]
+egg = 32
+run = 9
+on = false
+load = 1.0
+world = "run09.toml"
+
+[[run]]
+egg = 32
+run = 10
+on = false
+load = 2.0
+world = "run10.toml"
+
+[[run]]
+egg = 32
+run = 11
+on = false
+load = 1.0
+world = "run11.toml"
+
+[[run]]
+egg = 32
+run = 12
+on = false
+load = 1.25
+world = "run12.toml"
+
+[[run]]
+egg = 32
+run = 13
+on = true
+load = 1.75
+world = "run13.toml"
+
+[[run]]
+egg = 32
+run = 14
+on = false
+load = 1.0
+world = "run14.toml"
+
+[[run]]
+egg = 32
+run = 15
+on = true
+load = 1.5
+world = "run15.toml"
+
+[[run]]
+egg = 32
+run = 16
+on = false
+load = 2.0
+world = "run16.toml"
+
+[[run]]
+egg = 32
+run = 17
+on = true
+load = 1.75
+world = "run17.toml"
+
+[[run]]
+egg = 32
+run = 18
+on = true
+load = 1.0
+world = "run18.toml"
+
+[[run]]
+egg = 32
+run = 19
+on = false
+load = 1.25
+world = "run19.toml"
+
+[[run]]
+egg = 32
+run = 20
+on = false
+load = 1.5
+world = "run20.toml"
+
+[[run]]
+egg = 32
+run = 21
+on = false
+load = 1.5
+world = "run21.toml"
+
+[[run]]
+egg = 32
+run = 22
+on = false
+load = 1.5
+world = "run22.toml"
+
+[[run]]
+egg = 32
+run = 23
+on = false
+load = 1.5
+world = "run23.toml"
+
+[[run]]
+egg = 32
+run = 24
+on = false
+load = 1.75
+world = "run24.toml"
+
+[[run]]
+egg = 32
+run = 25
+on = false
+load = 1.25
+world = "run25.toml"
+
+[[run]]
+egg = 32
+run = 26
+on = false
+load = 1.25
+world = "run26.toml"
+
+[[run]]
+egg = 32
+run = 27
+on = false
+load = 1.5
+world = "run27.toml"
+
+[[run]]
+egg = 32
+run = 28
+on = false
+load = 1.25
+world = "run28.toml"
+
+[[run]]
+egg = 32
+run = 29
+on = false
+load = 1.0
+world = "run29.toml"
+
+[[run]]
+egg = 32
+run = 30
+on = false
+load = 1.75
+world = "run30.toml"
+
+[[run]]
+egg = 32
+run = 31
+on = false
+load = 2.0
+world = "run31.toml"
+
+[[run]]
+egg = 32
+run = 32
+on = false
+load = 1.5
+world = "run32.toml"
+
+[[run]]
+egg = 32
+run = 33
+on = true
+load = 2.0
+world = "run33.toml"
+
+[[run]]
+egg = 32
+run = 34
+on = false
+load = 1.25
+world = "run34.toml"
+
+[[run]]
+egg = 32
+run = 35
+on = true
+load = 1.5
+world = "run35.toml"
+
+[[run]]
+egg = 32
+run = 36
+on = false
+load = 1.25
+world = "run36.toml"
+
+[[run]]
+egg = 32
+run = 37
+on = false
+load = 1.75
+world = "run37.toml"
+
+[[run]]
+egg = 32
+run = 38
+on = true
+load = 1.5
+world = "run38.toml"
+
+[[run]]
+egg = 32
+run = 39
+on = true
+load = 1.0
+world = "run39.toml"
+
+[[run]]
+egg = 32
+run = 40
+on = true
+load = 1.25
+world = "run40.toml"

@@ -452,6 +452,21 @@ fn call_export(
         return Err(WasmError::InitFailed(written));
     }
     let written = written as u32;
+    // Measurement only (set A3_STATS=1): the largest input, output and fuel of any call so far.
+    if std::env::var_os("A3_STATS").is_some() {
+        use std::sync::atomic::{AtomicU64, Ordering::Relaxed};
+        static MAX_IN: AtomicU64 = AtomicU64::new(0);
+        static MAX_OUT: AtomicU64 = AtomicU64::new(0);
+        static MAX_FUEL: AtomicU64 = AtomicU64::new(0);
+        let fuel = limits.fuel_per_call.saturating_sub(store.get_fuel().unwrap_or(0));
+        let (a, b, c) = (input.len() as u64, written as u64, fuel);
+        let na = MAX_IN.fetch_max(a, Relaxed) < a;
+        let nb = MAX_OUT.fetch_max(b, Relaxed) < b;
+        let nc = MAX_FUEL.fetch_max(c, Relaxed) < c;
+        if na || nb || nc {
+            eprintln!("A3STATS max_in={} max_out={} max_fuel={}", MAX_IN.load(Relaxed), MAX_OUT.load(Relaxed), MAX_FUEL.load(Relaxed));
+        }
+    }
     if written > out_cap {
         return Err(WasmError::OutputTooLarge);
     }

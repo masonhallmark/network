@@ -1,0 +1,818 @@
+8822 bytes of 65536 cap (13.5%), 783 records, 0 trailing bytes unparsed
+
+type               records    bytes   %log
+HEARTBEAT               33      231   2.6%
+LINK_DOWN                2        8   0.1%
+LINK_UP                  3       12   0.1%
+LINK_QUALITY            56      392   4.4%
+PORT_STATS              58      522   5.9%
+CUSTOMER_RATE           86      688   7.8%
+CUSTOMER_GAP             8       64   0.7%
+TOP_TALKER              11       55   0.6%
+CUSTOMER_PROFILE        36      468   5.3%
+FLOW_LOSS              100     1100  12.5%
+BUDGET_STATS            33      231   2.6%
+RAW_SAMPLE             274     4110  46.6%
+RAW_KEEPALIVE           43      301   3.4%
+EXT                     40      640   7.3%
+
+bytes by observation second (cumulative, as a claim would need <= 24576):
+ 0s   293    293    1s   158    451    2s   192    643   
+ 3s   164    807    4s   108    915    5s   420   1335   
+ 6s   269   1604    7s   168   1772    8s   115   1887   
+ 9s   187   2074   10s   658   2732   11s   182   2914   
+12s   165   3079   13s   173   3252   14s   196   3448   
+15s   440   3888   16s   170   4058   17s   177   4235   
+18s   173   4408   19s    86   4494   20s   457   4951   
+21s   139   5090   22s   123   5213   23s    96   5309   
+24s   122   5431   25s   538   5969   26s   267   6236   
+27s   135   6371   28s   131   6502   29s    98   6600   
+30s   414   7014   31s   130   7144   32s   137   7281   
+33s   105   7386   34s   145   7531   35s   413   7944   
+36s   150   8094   37s   164   8258   38s   151   8409   
+39s   413   8822   
+
+records (non-raw unless --all):
+   0.00s S7  EXT               OBSERVE events_per_s=80 backlog=64 export_B_per_s=16000 burst_B=8000
+   0.00s S7  BUDGET_STATS      events_lost=0 reports_refused=0
+   0.00s S7  HEARTBEAT         records_originated=0 events_lost_est=0
+   0.00s S7  RAW_SAMPLE        10.29.156.200 -> 10.29.156.200 proto=0 size=0 ttl=63
+   0.00s S7  RAW_SAMPLE        10.50.151.8 -> 10.50.151.8 proto=0 size=0 ttl=63
+   0.00s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.45.119 proto=0 size=0 ttl=63
+   0.00s S7  RAW_SAMPLE        10.41.47.224 -> 10.41.47.224 proto=0 size=0 ttl=63
+   0.00s S7  RAW_SAMPLE        10.29.156.81 -> 10.29.156.81 proto=0 size=0 ttl=63
+   0.20s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+   0.21s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+   1.02s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   1.02s S7  CUSTOMER_RATE     cust=255 pkts=1506 kB=502
+   1.02s S7  CUSTOMER_RATE     cust=10 pkts=33 kB=3
+   1.02s S7  CUSTOMER_RATE     cust=15 pkts=81 kB=80
+   1.02s S7  CUSTOMER_RATE     cust=16 pkts=164 kB=163
+   1.02s S7  CUSTOMER_RATE     cust=17 pkts=49 kB=9
+   1.02s S7  CUSTOMER_RATE     cust=21 pkts=1 kB=0
+   0.22s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   0.23s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+   0.25s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   1.20s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+   1.21s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   1.22s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+   1.23s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   2.04s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   2.04s S7  CUSTOMER_RATE     cust=21 pkts=0 kB=0
+   2.04s S7  PORT_STATS        peer=255 drops=0 kB_out=983 ka_lost=0
+   2.04s S7  PORT_STATS        peer=255 drops=0 kB_out=23 ka_lost=2
+   2.04s S7  PORT_STATS        peer=255 drops=0 kB_out=25 ka_lost=0
+   2.04s S7  PORT_STATS        peer=255 drops=0 kB_out=485 ka_lost=0
+   1.25s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   0.00s S8  BUDGET_STATS      events_lost=0 reports_refused=0
+   0.00s S8  HEARTBEAT         records_originated=0 events_lost_est=0
+   1.02s S8  LINK_QUALITY      peer=S3 loss=0% delay=0.8ms
+   1.02s S8  LINK_QUALITY      peer=S7 loss=0% delay=0.5ms
+   1.02s S8  LINK_QUALITY      peer=S9 loss=0% delay=0.5ms
+   1.02s S8  LINK_QUALITY      peer=S13 loss=0% delay=0.5ms
+   0.38s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   0.41s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   0.45s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   0.48s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   0.51s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   2.20s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   2.21s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+   2.22s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   2.23s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   2.25s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   3.06s S7  LINK_QUALITY      peer=S2 loss=0% delay=0.5ms
+   3.06s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   2.04s S8  RAW_KEEPALIVE     port=1 peer=S7 delay=0.5ms
+   2.04s S8  RAW_KEEPALIVE     port=2 peer=S9 delay=0.5ms
+   2.04s S8  RAW_KEEPALIVE     port=3 peer=S13 delay=0.5ms
+   2.05s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   2.08s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   2.11s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   3.20s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+   3.21s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.149 proto=6 size=200 ttl=63
+   3.22s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   3.23s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   3.25s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   0.10s S7  CUSTOMER_GAP      cust=21 start=0.10s dur=3.97s
+   4.08s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   4.08s S7  CUSTOMER_RATE     cust=21 pkts=10 kB=10
+   4.08s S7  PORT_STATS        peer=255 drops=0 kB_out=17 ka_lost=2
+   4.20s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   4.21s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   4.22s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.17 proto=6 size=200 ttl=63
+   4.23s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.30 proto=6 size=200 ttl=63
+   4.25s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+   5.10s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   5.10s S7  CUSTOMER_RATE     cust=21 pkts=123 kB=123
+   5.10s S7  FLOW_LOSS         255->255 entered=7294 left=0 dups=0
+   5.10s S7  FLOW_LOSS         10->255 entered=161 left=0 dups=0
+   5.10s S7  FLOW_LOSS         15->255 entered=400 left=0 dups=0
+   5.10s S7  FLOW_LOSS         16->255 entered=814 left=0 dups=0
+   5.10s S7  FLOW_LOSS         17->255 entered=241 left=0 dups=0
+   5.10s S7  FLOW_LOSS         21->255 entered=134 left=0 dups=0
+   5.10s S7  FLOW_LOSS         255->255 entered=0 left=4676 dups=0
+   5.10s S7  FLOW_LOSS         255->10 entered=0 left=321 dups=0
+   5.10s S7  FLOW_LOSS         255->15 entered=0 left=400 dups=0
+   5.10s S7  FLOW_LOSS         255->16 entered=0 left=813 dups=0
+   5.10s S7  FLOW_LOSS         255->17 entered=0 left=240 dups=0
+   5.10s S7  FLOW_LOSS         255->21 entered=0 left=133 dups=0
+   5.10s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=1% rate_bucket=6 burst_cv=0.19 ttl<60=0% <30=0% <10=0% ack=0%
+   5.10s S7  CUSTOMER_PROFILE  cust=15 avg_size=992B udp=0% idle=1% rate_bucket=7 burst_cv=0.12 ttl<60=0% <30=0% <10=0% ack=0%
+   5.10s S7  CUSTOMER_PROFILE  cust=16 avg_size=992B udp=0% idle=1% rate_bucket=8 burst_cv=0.12 ttl<60=0% <30=0% <10=0% ack=0%
+   5.10s S7  CUSTOMER_PROFILE  cust=17 avg_size=192B udp=0% idle=1% rate_bucket=6 burst_cv=0.16 ttl<60=0% <30=0% <10=0% ack=0%
+   5.10s S7  CUSTOMER_PROFILE  cust=21 avg_size=992B udp=0% idle=76% rate_bucket=5 burst_cv=1.88 ttl<60=0% <30=0% <10=0% ack=0%
+   5.10s S7  TOP_TALKER        cust=16 share=57%
+   5.10s S7  BUDGET_STATS      events_lost=10 reports_refused=0
+   5.10s S7  HEARTBEAT         records_originated=7 events_lost_est=10
+   4.08s S8  PORT_STATS        peer=3 drops=0 kB_out=34 ka_lost=0
+   3.45s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   3.49s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   3.52s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   3.55s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   3.58s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   5.20s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+   5.21s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   5.22s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   5.23s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.124 proto=6 size=200 ttl=63
+   5.25s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.105 proto=6 size=200 ttl=63
+   6.12s S7  CUSTOMER_RATE     cust=255 pkts=1415 kB=500
+   6.12s S7  CUSTOMER_RATE     cust=10 pkts=32 kB=3
+   6.12s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+   6.12s S7  CUSTOMER_RATE     cust=16 pkts=163 kB=163
+   6.12s S7  CUSTOMER_RATE     cust=17 pkts=47 kB=9
+   6.12s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=1
+   6.12s S7  PORT_STATS        peer=255 drops=0 kB_out=730 ka_lost=0
+   5.10s S8  LINK_QUALITY      peer=S3 loss=0% delay=1.6ms
+   5.10s S8  BUDGET_STATS      events_lost=1 reports_refused=0
+   5.10s S8  HEARTBEAT         records_originated=5 events_lost_est=1
+   5.12s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   5.15s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   5.18s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   5.21s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   5.25s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   6.20s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   6.21s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   5.10s S1  BUDGET_STATS      events_lost=1 reports_refused=3
+   5.10s S1  HEARTBEAT         records_originated=3 events_lost_est=1
+   6.12s S1  LINK_QUALITY      peer=S6 loss=10% delay=0.5ms
+   6.12s S1  PORT_STATS        peer=0 drops=0 kB_out=36 ka_lost=0
+   6.12s S1  PORT_STATS        peer=6 drops=0 kB_out=582 ka_lost=1
+   6.12s S1  CUSTOMER_RATE     cust=4 pkts=25 kB=1
+   6.12s S1  CUSTOMER_RATE     cust=29 pkts=309 kB=309
+   6.12s S1  RAW_KEEPALIVE     port=0 peer=S0 delay=0.5ms
+   6.12s S1  RAW_KEEPALIVE     port=1 peer=S2 delay=30.0ms
+   6.12s S1  RAW_KEEPALIVE     port=2 peer=S6 delay=0.5ms
+   6.23s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   6.25s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.31 proto=6 size=200 ttl=63
+   6.26s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.48 proto=6 size=200 ttl=63
+   7.14s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   6.12s S8  LINK_QUALITY      peer=S3 loss=0% delay=0.5ms
+   6.11s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   6.12s S8  RAW_KEEPALIVE     port=3 peer=S13 delay=0.5ms
+   6.14s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   6.17s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   6.21s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   7.20s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+   7.21s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+   7.22s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   7.23s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+   7.25s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+   8.16s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   8.16s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+   5.91s S1  LINK_DOWN         peer=S6
+   7.54s S1  LINK_UP           peer=S6
+   8.20s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+   8.21s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   8.22s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+   8.23s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+   8.25s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+   9.18s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+   9.18s S7  CUSTOMER_RATE     cust=16 pkts=0 kB=0
+   8.16s S8  PORT_STATS        peer=3 drops=0 kB_out=35 ka_lost=0
+   7.55s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   7.58s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   7.61s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   7.65s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   7.68s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   9.20s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+   9.21s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+   9.22s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+   9.23s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+   9.25s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  10.20s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  10.20s S7  CUSTOMER_RATE     cust=21 pkts=122 kB=122
+  10.20s S7  PORT_STATS        peer=2 drops=0 kB_out=984 ka_lost=0
+  10.20s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+  10.20s S7  PORT_STATS        peer=255 drops=0 kB_out=25 ka_lost=0
+  10.20s S7  PORT_STATS        peer=255 drops=0 kB_out=404 ka_lost=0
+  10.20s S7  FLOW_LOSS         255->255 entered=7083 left=0 dups=0
+  10.20s S7  FLOW_LOSS         10->255 entered=159 left=0 dups=0
+  10.20s S7  FLOW_LOSS         15->255 entered=398 left=0 dups=0
+  10.20s S7  FLOW_LOSS         16->255 entered=462 left=0 dups=0
+  10.20s S7  FLOW_LOSS         17->255 entered=239 left=0 dups=0
+  10.20s S7  FLOW_LOSS         21->255 entered=613 left=0 dups=0
+  10.20s S7  FLOW_LOSS         255->255 entered=0 left=4464 dups=0
+  10.20s S7  FLOW_LOSS         255->10 entered=0 left=318 dups=0
+  10.20s S7  FLOW_LOSS         255->15 entered=0 left=398 dups=0
+  10.20s S7  FLOW_LOSS         255->16 entered=0 left=463 dups=0
+  10.20s S7  FLOW_LOSS         255->17 entered=0 left=239 dups=0
+  10.20s S7  FLOW_LOSS         255->21 entered=0 left=614 dups=0
+  10.20s S7  EXT               CCA cust=10 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=16 min=15 cv=1% dips=0
+  10.20s S7  EXT               CCA cust=15 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=40 min=39 cv=1% dips=0
+  10.20s S7  EXT               CCA cust=16 bin=100ms halvings=1 ratio=43% slope=0.00/bin max=17 min=0 cv=86% dips=3
+  10.20s S7  EXT               CCA_TRACE cust=16 pkts/100ms=[16 16 16 16 4 0 0 0 0 0 0 0 0 0 0 0]
+  10.20s S7  EXT               CCA cust=17 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=24 min=23 cv=1% dips=0
+  10.20s S7  EXT               CCA cust=21 bin=100ms halvings=0 ratio=100% slope=0.00/bin max=13 min=12 cv=3% dips=0
+  10.20s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=0% rate_bucket=6 burst_cv=0.09 ttl<60=0% <30=0% <10=0% ack=0%
+  10.20s S7  CUSTOMER_PROFILE  cust=15 avg_size=1000B udp=0% idle=0% rate_bucket=7 burst_cv=0.00 ttl<60=0% <30=0% <10=0% ack=0%
+  10.20s S7  CUSTOMER_PROFILE  cust=16 avg_size=1000B udp=0% idle=42% rate_bucket=7 burst_cv=0.84 ttl<60=0% <30=0% <10=0% ack=0%
+  10.20s S7  CUSTOMER_PROFILE  cust=17 avg_size=200B udp=0% idle=0% rate_bucket=6 burst_cv=0.06 ttl<60=0% <30=0% <10=0% ack=0%
+  10.20s S7  CUSTOMER_PROFILE  cust=21 avg_size=1000B udp=0% idle=0% rate_bucket=7 burst_cv=0.03 ttl<60=0% <30=0% <10=0% ack=0%
+  10.20s S7  TOP_TALKER        cust=21 share=39%
+  10.20s S7  BUDGET_STATS      events_lost=19 reports_refused=0
+  10.20s S7  HEARTBEAT         records_originated=11 events_lost_est=19
+   7.14s S13 LINK_QUALITY      peer=S12 loss=40% delay=4.8ms
+   8.16s S13 LINK_QUALITY      peer=S12 loss=0% delay=1.0ms
+   9.18s S13 LINK_QUALITY      peer=S12 loss=0% delay=28.9ms
+   9.96s S13 RAW_SAMPLE        10.31.218.12 -> 10.8.134.195 proto=0 size=40 ttl=63
+   9.34s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   9.37s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+   9.41s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+   9.44s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+   9.47s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  10.20s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  10.21s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  10.22s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  10.23s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  10.25s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  11.22s S7  CUSTOMER_RATE     cust=255 pkts=1415 kB=499
+  11.22s S7  CUSTOMER_RATE     cust=10 pkts=32 kB=3
+  11.22s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+  11.22s S7  CUSTOMER_RATE     cust=17 pkts=47 kB=9
+  10.20s S9  PORT_STATS        peer=8 drops=0 kB_out=134 ka_lost=0
+  10.20s S9  PORT_STATS        peer=14 drops=0 kB_out=134 ka_lost=0
+  10.20s S9  FLOW_LOSS         22->255 entered=669 left=0 dups=0
+  10.20s S9  FLOW_LOSS         255->22 entered=0 left=670 dups=0
+  10.20s S9  CUSTOMER_PROFILE  cust=22 avg_size=1000B udp=0% idle=0% rate_bucket=8 burst_cv=0.03 ttl<60=0% <30=0% <10=0% ack=0%
+  10.20s S9  BUDGET_STATS      events_lost=2 reports_refused=3
+  10.20s S9  HEARTBEAT         records_originated=3 events_lost_est=2
+  10.20s S9  EXT               CCA cust=22 bin=100ms halvings=0 ratio=100% slope=0.00/bin max=14 min=13 cv=3% dips=0
+  10.20s S9  TOP_TALKER        cust=22 share=100%
+  10.20s S9  RAW_KEEPALIVE     port=0 peer=S4 delay=0.5ms
+  10.20s S9  RAW_KEEPALIVE     port=1 peer=S8 delay=0.5ms
+  10.20s S9  RAW_KEEPALIVE     port=2 peer=S14 delay=0.5ms
+  10.20s S8  BUDGET_STATS      events_lost=3 reports_refused=0
+  10.20s S8  HEARTBEAT         records_originated=6 events_lost_est=3
+  10.24s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  10.27s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  10.30s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  10.33s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  10.37s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  11.20s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  11.21s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  11.22s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  11.23s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  11.25s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  12.24s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  12.24s S7  CUSTOMER_RATE     cust=15 pkts=352 kB=352
+  12.24s S7  CUSTOMER_RATE     cust=21 pkts=94 kB=94
+  12.24s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=1
+  12.24s S7  PORT_STATS        peer=255 drops=0 kB_out=649 ka_lost=0
+  10.09s S3  CUSTOMER_GAP      cust=7 start=10.09s dur=1.93s
+  12.20s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  12.21s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  12.22s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  12.23s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  12.25s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  12.24s S8  PORT_STATS        peer=3 drops=0 kB_out=36 ka_lost=0
+  11.71s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  11.74s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  11.77s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  11.81s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  11.84s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  13.26s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  13.26s S7  CUSTOMER_RATE     cust=15 pkts=1275 kB=1275
+  13.26s S7  CUSTOMER_RATE     cust=21 pkts=0 kB=0
+  10.20s S0  BUDGET_STATS      events_lost=1 reports_refused=2
+  10.20s S0  HEARTBEAT         records_originated=2 events_lost_est=1
+  12.24s S0  PORT_STATS        peer=1 drops=0 kB_out=15 ka_lost=0
+  12.24s S0  PORT_STATS        peer=5 drops=0 kB_out=451 ka_lost=0
+  12.24s S0  RAW_KEEPALIVE     port=0 peer=S1 delay=0.5ms
+  12.24s S0  RAW_KEEPALIVE     port=1 peer=S5 delay=0.5ms
+  13.20s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  13.21s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  13.22s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  13.23s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  13.25s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  14.28s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  14.28s S7  PORT_STATS        peer=255 drops=0 kB_out=17 ka_lost=2
+  14.28s S7  PORT_STATS        peer=255 drops=0 kB_out=2550 ka_lost=0
+  13.44s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  13.47s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  13.50s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  13.53s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  13.57s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  14.20s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  14.21s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  14.22s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  14.23s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  14.25s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  15.30s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  15.30s S7  FLOW_LOSS         255->255 entered=7198 left=0 dups=0
+  15.30s S7  FLOW_LOSS         10->255 entered=160 left=0 dups=0
+  15.30s S7  FLOW_LOSS         15->255 entered=4257 left=0 dups=0
+  15.30s S7  FLOW_LOSS         17->255 entered=239 left=0 dups=0
+  15.30s S7  FLOW_LOSS         21->255 entered=217 left=0 dups=0
+  15.30s S7  FLOW_LOSS         255->255 entered=0 left=5332 dups=0
+  15.30s S7  FLOW_LOSS         255->10 entered=0 left=320 dups=0
+  15.30s S7  FLOW_LOSS         255->15 entered=0 left=4250 dups=0
+  15.30s S7  FLOW_LOSS         255->17 entered=0 left=240 dups=0
+  15.30s S7  FLOW_LOSS         255->21 entered=0 left=217 dups=0
+  15.30s S7  EXT               CCA cust=21 bin=500ms halvings=2 ratio=54% slope=0.00/bin max=62 min=0 cv=127% dips=0
+  15.30s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=0% rate_bucket=6 burst_cv=0.09 ttl<60=0% <30=0% <10=0% ack=0%
+  15.30s S7  CUSTOMER_PROFILE  cust=15 avg_size=1000B udp=0% idle=0% rate_bucket=10 burst_cv=0.66 ttl<60=0% <30=0% <10=0% ack=0%
+  15.30s S7  CUSTOMER_PROFILE  cust=17 avg_size=200B udp=0% idle=0% rate_bucket=6 burst_cv=0.06 ttl<60=0% <30=0% <10=0% ack=0%
+  15.30s S7  CUSTOMER_PROFILE  cust=21 avg_size=1000B udp=0% idle=64% rate_bucket=6 burst_cv=1.31 ttl<60=0% <30=0% <10=0% ack=0%
+  15.30s S7  TOP_TALKER        cust=15 share=93%
+  15.30s S7  BUDGET_STATS      events_lost=28 reports_refused=0
+  15.30s S7  HEARTBEAT         records_originated=15 events_lost_est=28
+  14.49s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  14.53s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  14.56s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  14.59s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  14.62s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  15.20s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  15.21s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+   8.05s S7  CUSTOMER_GAP      cust=16 start=8.05s dur=7.95s
+  15.22s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  15.23s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  15.25s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  16.32s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  16.32s S7  CUSTOMER_RATE     cust=255 pkts=1503 kB=503
+  16.32s S7  CUSTOMER_RATE     cust=10 pkts=31 kB=3
+  16.32s S7  CUSTOMER_RATE     cust=15 pkts=901 kB=901
+  16.32s S7  CUSTOMER_RATE     cust=16 pkts=51 kB=51
+  16.32s S7  CUSTOMER_RATE     cust=17 pkts=47 kB=9
+  16.32s S7  PORT_STATS        peer=255 drops=0 kB_out=23 ka_lost=2
+  15.30s S11 LINK_QUALITY      peer=S12 loss=10% delay=0.5ms
+  15.30s S11 BUDGET_STATS      events_lost=0 reports_refused=11
+  15.30s S11 HEARTBEAT         records_originated=12 events_lost_est=0
+  15.30s S11 EXT               CCA cust=18 bin=100ms halvings=2 ratio=35% slope=0.00/bin max=45 min=0 cv=196% dips=0
+  15.30s S11 EXT               CCA_TRACE cust=18 pkts/100ms=[44 44 44 44 16 0 0 0 0 0 0 0 0 0 0 0]
+  15.30s S11 TOP_TALKER        cust=2 share=55%
+  14.28s S11 RAW_KEEPALIVE     port=0 peer=S6 delay=0.5ms
+  14.28s S11 RAW_KEEPALIVE     port=1 peer=S10 delay=0.5ms
+  14.28s S11 RAW_KEEPALIVE     port=2 peer=S12 delay=0.5ms
+  16.20s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  16.21s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  16.22s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  16.23s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  16.25s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  16.32s S8  PORT_STATS        peer=3 drops=0 kB_out=37 ka_lost=0
+  15.84s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  15.87s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  15.90s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  15.93s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  15.97s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  15.30s S4  BUDGET_STATS      events_lost=0 reports_refused=2
+  15.30s S4  HEARTBEAT         records_originated=2 events_lost_est=0
+  16.32s S4  CUSTOMER_RATE     cust=9 pkts=25 kB=1
+  16.32s S4  CUSTOMER_RATE     cust=20 pkts=295 kB=59
+  16.32s S4  RAW_KEEPALIVE     port=0 peer=S3 delay=0.5ms
+  16.32s S4  RAW_KEEPALIVE     port=1 peer=S9 delay=0.5ms
+  17.34s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  17.34s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+  17.34s S7  CUSTOMER_RATE     cust=16 pkts=163 kB=163
+  17.20s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  17.21s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  17.22s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  17.23s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  17.25s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  18.36s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  18.36s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+  18.36s S7  PORT_STATS        peer=255 drops=0 kB_out=485 ka_lost=0
+  15.30s S9  BUDGET_STATS      events_lost=0 reports_refused=3
+  15.30s S9  HEARTBEAT         records_originated=3 events_lost_est=0
+  17.60s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  17.63s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  17.66s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.5 proto=6 size=100 ttl=63
+  17.69s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.224 proto=6 size=100 ttl=63
+  17.73s S8  RAW_SAMPLE        10.11.92.98 -> 10.22.59.113 proto=6 size=100 ttl=63
+  18.20s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  18.21s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  18.22s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  18.23s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  18.25s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  19.38s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  19.20s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  19.21s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.105 proto=6 size=200 ttl=63
+  19.22s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  19.23s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  19.25s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  12.03s S7  CUSTOMER_GAP      cust=21 start=12.03s dur=8.05s
+  17.95s S1  LINK_DOWN         peer=S6
+  19.58s S1  LINK_UP           peer=S6
+  18.36s S1  LINK_QUALITY      peer=S6 loss=40% delay=0.5ms
+  20.40s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  20.40s S7  CUSTOMER_RATE     cust=21 pkts=48 kB=48
+  20.40s S7  PORT_STATS        peer=2 drops=0 kB_out=983 ka_lost=0
+  20.40s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+  20.40s S7  PORT_STATS        peer=255 drops=0 kB_out=25 ka_lost=0
+  20.40s S7  PORT_STATS        peer=255 drops=0 kB_out=533 ka_lost=0
+  20.40s S7  FLOW_LOSS         255->255 entered=7167 left=0 dups=0
+  20.40s S7  FLOW_LOSS         10->255 entered=159 left=0 dups=0
+  20.40s S7  FLOW_LOSS         15->255 entered=1220 left=0 dups=0
+  20.40s S7  FLOW_LOSS         16->255 entered=702 left=0 dups=0
+  20.40s S7  FLOW_LOSS         17->255 entered=239 left=0 dups=0
+  20.40s S7  FLOW_LOSS         21->255 entered=48 left=0 dups=0
+  20.40s S7  FLOW_LOSS         255->255 entered=0 left=17295 dups=0
+  20.40s S7  FLOW_LOSS         255->10 entered=0 left=243 dups=0
+  20.40s S7  FLOW_LOSS         255->15 entered=0 left=1227 dups=0
+  20.40s S7  FLOW_LOSS         255->16 entered=0 left=701 dups=0
+  20.40s S7  FLOW_LOSS         255->17 entered=0 left=239 dups=0
+  20.40s S7  FLOW_LOSS         255->21 entered=0 left=48 dups=0
+  20.40s S7  EXT               CCA cust=10 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=16 min=15 cv=1% dips=0
+  20.40s S7  EXT               CCA cust=15 bin=100ms halvings=1 ratio=7% slope=0.00/bin max=128 min=7 cv=167% dips=0
+  20.40s S7  EXT               CCA_TRACE cust=15 pkts/100ms=[120 120 120 108 0 0 0 0 0 0 0 0 0 0 0 0]
+  20.40s S7  EXT               CCA cust=16 bin=100ms halvings=0 ratio=100% slope=0.00/bin max=17 min=0 cv=39% dips=0
+  20.40s S7  EXT               CCA cust=17 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=24 min=23 cv=1% dips=0
+  20.40s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=0% rate_bucket=6 burst_cv=0.09 ttl<60=0% <30=0% <10=0% ack=0%
+  20.40s S7  CUSTOMER_PROFILE  cust=15 avg_size=1000B udp=0% idle=0% rate_bucket=8 burst_cv=1.66 ttl<60=0% <30=0% <10=0% ack=0%
+  20.40s S7  CUSTOMER_PROFILE  cust=16 avg_size=1000B udp=0% idle=12% rate_bucket=8 burst_cv=0.38 ttl<60=0% <30=0% <10=0% ack=0%
+  20.40s S7  CUSTOMER_PROFILE  cust=17 avg_size=200B udp=0% idle=0% rate_bucket=6 burst_cv=0.06 ttl<60=0% <30=0% <10=0% ack=0%
+  20.40s S7  CUSTOMER_PROFILE  cust=21 avg_size=1000B udp=0% idle=92% rate_bucket=4 burst_cv=3.38 ttl<60=0% <30=0% <10=0% ack=0%
+  20.40s S7  TOP_TALKER        cust=15 share=59%
+  20.40s S7  BUDGET_STATS      events_lost=37 reports_refused=0
+  20.40s S7  HEARTBEAT         records_originated=22 events_lost_est=37
+   0.10s S1  CUSTOMER_GAP      cust=12 start=0.10s dur=19.99s
+   0.10s S1  CUSTOMER_GAP      cust=26 start=0.10s dur=19.99s
+  20.21s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  20.22s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.48 proto=6 size=200 ttl=63
+  20.23s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.75 proto=6 size=200 ttl=63
+  20.25s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  20.26s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  18.27s S2  RAW_SAMPLE        10.46.84.239 -> 10.50.151.8 proto=17 size=64 ttl=63
+  18.36s S2  RAW_KEEPALIVE     port=0 peer=S1 delay=2.0ms
+  18.36s S2  RAW_KEEPALIVE     port=1 peer=S3 delay=0.5ms
+  18.36s S2  RAW_KEEPALIVE     port=2 peer=S7 delay=0.5ms
+  18.68s S2  RAW_SAMPLE        10.46.84.191 -> 10.50.151.8 proto=17 size=64 ttl=63
+  18.72s S2  RAW_SAMPLE        10.28.6.55 -> 10.28.45.119 proto=6 size=100 ttl=63
+  21.42s S7  CUSTOMER_RATE     cust=255 pkts=1416 kB=499
+  21.42s S7  CUSTOMER_RATE     cust=10 pkts=32 kB=3
+  21.42s S7  CUSTOMER_RATE     cust=17 pkts=48 kB=9
+  21.42s S7  CUSTOMER_RATE     cust=21 pkts=123 kB=123
+  21.20s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  21.21s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  21.22s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  21.23s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.164 proto=6 size=200 ttl=63
+  21.25s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.228 proto=6 size=200 ttl=63
+  22.44s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  22.44s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+  22.44s S7  CUSTOMER_RATE     cust=16 pkts=163 kB=163
+  22.44s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=1
+  22.44s S7  PORT_STATS        peer=255 drops=0 kB_out=731 ka_lost=0
+  20.40s S1  LINK_QUALITY      peer=S6 loss=10% delay=0.5ms
+  20.40s S1  BUDGET_STATS      events_lost=1 reports_refused=12
+  20.40s S1  HEARTBEAT         records_originated=21 events_lost_est=1
+  21.42s S1  CUSTOMER_RATE     cust=4 pkts=24 kB=1
+  21.42s S1  CUSTOMER_RATE     cust=12 pkts=34 kB=34
+  21.42s S1  CUSTOMER_RATE     cust=26 pkts=32 kB=32
+  21.42s S1  CUSTOMER_RATE     cust=29 pkts=309 kB=309
+  22.20s S7  RAW_SAMPLE        10.41.47.63 -> 10.44.205.236 proto=6 size=200 ttl=63
+  22.21s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  22.22s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  22.23s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  22.25s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.142 proto=6 size=200 ttl=63
+  23.46s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  23.20s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  23.21s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  23.22s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  23.23s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  23.25s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  24.48s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  24.48s S7  CUSTOMER_RATE     cust=16 pkts=86 kB=86
+  24.48s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+  20.40s S14 BUDGET_STATS      events_lost=1 reports_refused=2
+  20.40s S14 HEARTBEAT         records_originated=2 events_lost_est=1
+  24.20s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  24.21s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  24.22s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  24.23s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  24.25s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  25.50s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  25.50s S7  CUSTOMER_RATE     cust=16 pkts=0 kB=0
+  25.50s S7  FLOW_LOSS         255->255 entered=7084 left=0 dups=0
+  25.50s S7  FLOW_LOSS         10->255 entered=159 left=0 dups=0
+  25.50s S7  FLOW_LOSS         15->255 entered=399 left=0 dups=0
+  25.50s S7  FLOW_LOSS         16->255 entered=573 left=0 dups=0
+  25.50s S7  FLOW_LOSS         17->255 entered=239 left=0 dups=0
+  25.50s S7  FLOW_LOSS         21->255 entered=614 left=0 dups=0
+  25.50s S7  FLOW_LOSS         255->255 entered=0 left=17216 dups=0
+  25.50s S7  FLOW_LOSS         255->10 entered=0 left=159 dups=0
+  25.50s S7  FLOW_LOSS         255->15 entered=0 left=398 dups=0
+  25.50s S7  FLOW_LOSS         255->16 entered=0 left=574 dups=0
+  25.50s S7  FLOW_LOSS         255->17 entered=0 left=239 dups=0
+  25.50s S7  FLOW_LOSS         255->21 entered=0 left=614 dups=0
+  25.50s S7  EXT               CCA cust=16 bin=100ms halvings=1 ratio=23% slope=0.00/bin max=17 min=0 cv=64% dips=0
+  25.50s S7  EXT               CCA_TRACE cust=16 pkts/100ms=[16 16 16 16 4 0 0 0 0 0 0 0 0 0 0 0]
+  25.50s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=0% rate_bucket=6 burst_cv=0.09 ttl<60=0% <30=0% <10=0% ack=0%
+  25.50s S7  CUSTOMER_PROFILE  cust=15 avg_size=1000B udp=0% idle=0% rate_bucket=7 burst_cv=0.00 ttl<60=0% <30=0% <10=0% ack=0%
+  25.50s S7  CUSTOMER_PROFILE  cust=16 avg_size=1000B udp=0% idle=28% rate_bucket=7 burst_cv=0.62 ttl<60=0% <30=0% <10=0% ack=0%
+  25.50s S7  CUSTOMER_PROFILE  cust=17 avg_size=200B udp=0% idle=0% rate_bucket=6 burst_cv=0.06 ttl<60=0% <30=0% <10=0% ack=0%
+  25.50s S7  CUSTOMER_PROFILE  cust=21 avg_size=1000B udp=0% idle=0% rate_bucket=7 burst_cv=0.03 ttl<60=0% <30=0% <10=0% ack=0%
+  25.50s S7  TOP_TALKER        cust=21 share=37%
+  25.50s S7  BUDGET_STATS      events_lost=47 reports_refused=0
+  25.50s S7  HEARTBEAT         records_originated=26 events_lost_est=47
+  25.20s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  25.21s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  25.22s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  25.23s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  25.25s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  26.52s S7  CUSTOMER_RATE     cust=255 pkts=1415 kB=500
+  26.52s S7  CUSTOMER_RATE     cust=10 pkts=32 kB=3
+  26.52s S7  CUSTOMER_RATE     cust=17 pkts=48 kB=9
+  26.52s S7  CUSTOMER_RATE     cust=21 pkts=123 kB=123
+  26.52s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=1
+  26.52s S7  PORT_STATS        peer=255 drops=0 kB_out=405 ka_lost=0
+  23.46s S13 LINK_QUALITY      peer=S12 loss=0% delay=1.3ms
+  25.50s S13 FLOW_LOSS         255->255 entered=4556 left=0 dups=0
+  25.50s S13 FLOW_LOSS         255->255 entered=0 left=4556 dups=0
+  25.50s S13 BUDGET_STATS      events_lost=1 reports_refused=16
+  25.50s S13 HEARTBEAT         records_originated=20 events_lost_est=1
+  25.22s S13 RAW_SAMPLE        10.31.218.12 -> 10.8.134.195 proto=0 size=40 ttl=63
+  26.20s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  26.21s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  26.22s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  26.23s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  26.25s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  22.44s S6  LINK_QUALITY      peer=S1 loss=0% delay=1.2ms
+  23.46s S6  LINK_QUALITY      peer=S1 loss=0% delay=0.5ms
+  25.50s S6  LINK_QUALITY      peer=S1 loss=0% delay=1.2ms
+  25.50s S6  BUDGET_STATS      events_lost=3 reports_refused=20
+  25.50s S6  HEARTBEAT         records_originated=23 events_lost_est=3
+  26.52s S6  LINK_QUALITY      peer=S1 loss=0% delay=0.5ms
+  26.52s S6  PORT_STATS        peer=7 drops=228 kB_out=634 ka_lost=0
+  25.50s S6  EXT               CCA cust=19 bin=100ms halvings=9 ratio=0% slope=0.00/bin max=128 min=0 cv=217% dips=0
+  25.50s S6  EXT               CCA_TRACE cust=19 pkts/100ms=[0 0 12 120 24 0 0 0 0 0 0 0 96 60 0 0]
+  26.52s S6  CUSTOMER_RATE     cust=255 pkts=0 kB=0
+  26.52s S6  CUSTOMER_RATE     cust=8 pkts=153 kB=153
+  24.79s S6  RAW_SAMPLE        10.19.251.119 -> 10.17.224.158 proto=6 size=1000 ttl=63
+  26.52s S6  RAW_KEEPALIVE     port=0 peer=S1 delay=0.5ms
+  26.52s S6  RAW_KEEPALIVE     port=1 peer=S5 delay=0.5ms
+  26.52s S6  RAW_KEEPALIVE     port=2 peer=S7 delay=0.5ms
+  26.52s S6  RAW_KEEPALIVE     port=3 peer=S11 delay=0.5ms
+  27.54s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  27.54s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+  27.20s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  27.21s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  27.22s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  25.50s S1  BUDGET_STATS      events_lost=1 reports_refused=16
+  25.50s S1  HEARTBEAT         records_originated=25 events_lost_est=1
+  26.52s S1  CUSTOMER_RATE     cust=4 pkts=25 kB=1
+  26.52s S1  CUSTOMER_RATE     cust=12 pkts=0 kB=0
+  26.52s S1  CUSTOMER_RATE     cust=26 pkts=0 kB=0
+  26.52s S1  CUSTOMER_RATE     cust=29 pkts=309 kB=309
+  26.52s S1  RAW_KEEPALIVE     port=1 peer=S2 delay=30.0ms
+  26.52s S1  RAW_KEEPALIVE     port=2 peer=S6 delay=0.5ms
+  27.02s S1  RAW_SAMPLE        10.62.116.190 -> 10.36.62.220 proto=6 size=1000 ttl=63
+  27.25s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  27.26s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  25.50s S10 FLOW_LOSS         5->255 entered=717 left=0 dups=0
+  25.50s S10 FLOW_LOSS         255->5 entered=0 left=717 dups=0
+  25.50s S10 CUSTOMER_PROFILE  cust=5 avg_size=200B udp=100% idle=0% rate_bucket=8 burst_cv=0.03 ttl<60=0% <30=0% <10=0% ack=0%
+  25.50s S10 BUDGET_STATS      events_lost=1 reports_refused=4
+  25.50s S10 HEARTBEAT         records_originated=4 events_lost_est=1
+  25.50s S10 TOP_TALKER        cust=5 share=100%
+  26.52s S10 CUSTOMER_RATE     cust=5 pkts=144 kB=28
+  26.52s S10 RAW_KEEPALIVE     port=0 peer=S5 delay=0.5ms
+  28.56s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  28.56s S7  CUSTOMER_RATE     cust=15 pkts=727 kB=727
+  28.56s S7  CUSTOMER_RATE     cust=21 pkts=55 kB=55
+  28.56s S7  PORT_STATS        peer=255 drops=0 kB_out=19 ka_lost=2
+  28.56s S7  PORT_STATS        peer=255 drops=0 kB_out=985 ka_lost=0
+  27.54s S13 LINK_QUALITY      peer=S12 loss=50% delay=1.3ms
+  27.54s S13 CUSTOMER_RATE     cust=255 pkts=982 kB=39
+  27.14s S13 RAW_SAMPLE        10.31.218.12 -> 10.8.134.195 proto=0 size=40 ttl=63
+  28.20s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  28.21s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  28.22s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  28.23s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  28.25s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  25.50s S5  BUDGET_STATS      events_lost=2 reports_refused=3
+  25.50s S5  HEARTBEAT         records_originated=3 events_lost_est=2
+  26.52s S5  RAW_KEEPALIVE     port=0 peer=S0 delay=0.5ms
+  26.52s S5  RAW_KEEPALIVE     port=1 peer=S6 delay=0.5ms
+  26.52s S5  RAW_KEEPALIVE     port=2 peer=S10 delay=0.5ms
+  29.58s S7  LINK_QUALITY      peer=S255 loss=20% delay=0.0ms
+  29.58s S7  CUSTOMER_RATE     cust=15 pkts=1275 kB=1275
+  29.58s S7  CUSTOMER_RATE     cust=21 pkts=0 kB=0
+  25.50s S0  BUDGET_STATS      events_lost=1 reports_refused=4
+  25.50s S0  HEARTBEAT         records_originated=4 events_lost_est=1
+  28.56s S0  RAW_KEEPALIVE     port=1 peer=S5 delay=0.5ms
+  29.20s S7  RAW_SAMPLE        10.28.45.11 -> 10.28.6.33 proto=6 size=1000 ttl=63
+  29.21s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  29.22s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  29.23s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  29.25s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  30.60s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  30.60s S7  PORT_STATS        peer=2 drops=0 kB_out=983 ka_lost=0
+  30.60s S7  PORT_STATS        peer=255 drops=0 kB_out=21 ka_lost=3
+  30.60s S7  PORT_STATS        peer=255 drops=0 kB_out=25 ka_lost=0
+  30.60s S7  PORT_STATS        peer=255 drops=0 kB_out=2550 ka_lost=0
+  30.60s S7  FLOW_LOSS         255->255 entered=7283 left=0 dups=0
+  30.60s S7  FLOW_LOSS         10->255 entered=160 left=0 dups=0
+  30.60s S7  FLOW_LOSS         15->255 entered=3436 left=0 dups=0
+  30.60s S7  FLOW_LOSS         17->255 entered=239 left=0 dups=0
+  30.60s S7  FLOW_LOSS         21->255 entered=301 left=0 dups=0
+  30.60s S7  FLOW_LOSS         255->255 entered=0 left=15917 dups=0
+  30.60s S7  FLOW_LOSS         255->10 entered=0 left=160 dups=0
+  30.60s S7  FLOW_LOSS         255->15 entered=0 left=3431 dups=0
+  30.60s S7  FLOW_LOSS         255->17 entered=0 left=239 dups=0
+  30.60s S7  FLOW_LOSS         255->21 entered=0 left=301 dups=0
+  30.60s S7  EXT               CCA cust=10 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=16 min=16 cv=0% dips=0
+  30.60s S7  EXT               CCA cust=15 bin=100ms halvings=0 ratio=100% slope=0.00/bin max=128 min=7 cv=86% dips=6
+  30.60s S7  EXT               CCA cust=17 bin=500ms halvings=0 ratio=100% slope=0.00/bin max=24 min=23 cv=1% dips=0
+  30.60s S7  EXT               CCA cust=21 bin=500ms halvings=1 ratio=0% slope=0.00/bin max=62 min=0 cv=100% dips=1
+  30.60s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=0% rate_bucket=6 burst_cv=0.09 ttl<60=0% <30=0% <10=0% ack=0%
+  30.60s S7  CUSTOMER_PROFILE  cust=15 avg_size=1000B udp=0% idle=0% rate_bucket=10 burst_cv=0.84 ttl<60=0% <30=0% <10=0% ack=0%
+  30.60s S7  CUSTOMER_PROFILE  cust=17 avg_size=200B udp=0% idle=0% rate_bucket=6 burst_cv=0.06 ttl<60=0% <30=0% <10=0% ack=0%
+  30.60s S7  CUSTOMER_PROFILE  cust=21 avg_size=1000B udp=0% idle=50% rate_bucket=6 burst_cv=1.00 ttl<60=0% <30=0% <10=0% ack=0%
+  30.60s S7  TOP_TALKER        cust=15 share=90%
+  30.60s S7  BUDGET_STATS      events_lost=56 reports_refused=0
+  30.60s S7  HEARTBEAT         records_originated=30 events_lost_est=56
+  30.20s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  30.21s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  30.22s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  30.23s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  30.25s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  31.62s S7  CUSTOMER_RATE     cust=255 pkts=1418 kB=499
+  31.62s S7  CUSTOMER_RATE     cust=10 pkts=32 kB=3
+  31.62s S7  CUSTOMER_RATE     cust=17 pkts=48 kB=9
+  31.20s S7  RAW_SAMPLE        10.28.45.79 -> 10.28.6.149 proto=6 size=1000 ttl=63
+  31.21s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  31.22s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  24.07s S7  CUSTOMER_GAP      cust=16 start=24.07s dur=7.95s
+  31.23s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  31.25s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  32.64s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  32.64s S7  CUSTOMER_RATE     cust=15 pkts=526 kB=526
+  32.64s S7  CUSTOMER_RATE     cust=16 pkts=102 kB=102
+  32.64s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=1
+  32.64s S7  PORT_STATS        peer=255 drops=0 kB_out=1903 ka_lost=0
+  32.20s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  32.21s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  32.22s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  32.23s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  32.25s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  30.60s S4  BUDGET_STATS      events_lost=0 reports_refused=2
+  30.60s S4  HEARTBEAT         records_originated=2 events_lost_est=0
+  31.62s S4  CUSTOMER_RATE     cust=9 pkts=24 kB=1
+  31.62s S4  CUSTOMER_RATE     cust=20 pkts=295 kB=59
+  31.88s S4  RAW_SAMPLE        10.31.43.205 -> 10.42.152.27 proto=17 size=200 ttl=63
+  33.66s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  33.66s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+  33.66s S7  CUSTOMER_RATE     cust=16 pkts=163 kB=163
+  30.60s S14 PORT_STATS        peer=13 drops=0 kB_out=133 ka_lost=0
+  30.60s S14 BUDGET_STATS      events_lost=0 reports_refused=2
+  30.60s S14 HEARTBEAT         records_originated=2 events_lost_est=0
+  30.60s S14 RAW_KEEPALIVE     port=0 peer=S9 delay=0.5ms
+  30.60s S14 RAW_KEEPALIVE     port=1 peer=S13 delay=25.0ms
+  32.64s S14 RAW_KEEPALIVE     port=0 peer=S9 delay=0.5ms
+  32.64s S14 RAW_KEEPALIVE     port=1 peer=S13 delay=25.0ms
+  33.20s S7  RAW_SAMPLE        10.28.45.115 -> 10.28.6.196 proto=6 size=1000 ttl=63
+  33.21s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  33.22s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  33.23s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  33.25s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  34.68s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  34.68s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+  34.68s S7  PORT_STATS        peer=255 drops=0 kB_out=485 ka_lost=0
+  34.20s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  34.21s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  34.22s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  34.23s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  34.25s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  35.70s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  35.70s S7  FLOW_LOSS         255->255 entered=7082 left=0 dups=0
+  35.70s S7  FLOW_LOSS         10->255 entered=159 left=0 dups=0
+  35.70s S7  FLOW_LOSS         15->255 entered=2040 left=0 dups=0
+  35.70s S7  FLOW_LOSS         16->255 entered=590 left=0 dups=0
+  35.70s S7  FLOW_LOSS         17->255 entered=239 left=0 dups=0
+  35.70s S7  FLOW_LOSS         255->255 entered=0 left=4464 dups=0
+  35.70s S7  FLOW_LOSS         255->10 entered=0 left=159 dups=0
+  35.70s S7  FLOW_LOSS         255->15 entered=0 left=2046 dups=0
+  35.70s S7  FLOW_LOSS         255->16 entered=0 left=589 dups=0
+  35.70s S7  FLOW_LOSS         255->17 entered=0 left=239 dups=0
+  35.70s S7  EXT               CCA cust=15 bin=100ms halvings=1 ratio=8% slope=0.00/bin max=128 min=7 cv=129% dips=0
+  35.70s S7  EXT               CCA_TRACE cust=15 pkts/100ms=[120 120 120 96 0 0 0 0 0 0 0 0 0 0 0 0]
+  35.70s S7  CUSTOMER_PROFILE  cust=10 avg_size=96B udp=0% idle=0% rate_bucket=6 burst_cv=0.09 ttl<60=0% <30=0% <10=0% ack=0%
+  35.70s S7  CUSTOMER_PROFILE  cust=15 avg_size=1000B udp=0% idle=0% rate_bucket=9 burst_cv=1.28 ttl<60=0% <30=0% <10=0% ack=0%
+  35.70s S7  CUSTOMER_PROFILE  cust=16 avg_size=1000B udp=0% idle=26% rate_bucket=7 burst_cv=0.59 ttl<60=0% <30=0% <10=0% ack=0%
+  35.70s S7  CUSTOMER_PROFILE  cust=17 avg_size=200B udp=0% idle=0% rate_bucket=6 burst_cv=0.06 ttl<60=0% <30=0% <10=0% ack=0%
+  35.70s S7  TOP_TALKER        cust=15 share=75%
+  35.70s S7  BUDGET_STATS      events_lost=65 reports_refused=0
+  35.70s S7  HEARTBEAT         records_originated=35 events_lost_est=65
+  35.20s S7  RAW_SAMPLE        10.28.45.215 -> 10.28.6.133 proto=6 size=1000 ttl=63
+  28.05s S7  CUSTOMER_GAP      cust=21 start=28.05s dur=7.95s
+  35.21s S7  RAW_SAMPLE        10.41.47.224 -> 10.44.205.198 proto=6 size=200 ttl=63
+  35.22s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  35.23s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  35.25s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  32.64s S6  LINK_QUALITY      peer=S1 loss=0% delay=0.6ms
+  33.66s S6  LINK_QUALITY      peer=S1 loss=0% delay=1.2ms
+  34.68s S6  LINK_QUALITY      peer=S1 loss=0% delay=0.6ms
+  34.68s S6  PORT_STATS        peer=7 drops=228 kB_out=634 ka_lost=0
+  34.68s S6  CUSTOMER_RATE     cust=255 pkts=0 kB=0
+  34.68s S6  RAW_KEEPALIVE     port=0 peer=S1 delay=0.6ms
+  34.68s S6  RAW_KEEPALIVE     port=2 peer=S7 delay=0.5ms
+  34.68s S6  RAW_KEEPALIVE     port=3 peer=S11 delay=0.5ms
+  36.72s S7  CUSTOMER_RATE     cust=255 pkts=1417 kB=499
+  36.72s S7  CUSTOMER_RATE     cust=10 pkts=32 kB=3
+  36.72s S7  CUSTOMER_RATE     cust=17 pkts=48 kB=9
+  36.72s S7  CUSTOMER_RATE     cust=21 pkts=87 kB=87
+  36.72s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=1
+  36.00s S0  LINK_UP           peer=S5
+  35.70s S0  BUDGET_STATS      events_lost=1 reports_refused=7
+  35.70s S0  HEARTBEAT         records_originated=8 events_lost_est=1
+  36.20s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  36.21s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  36.22s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.116 proto=6 size=200 ttl=63
+  36.23s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.83 proto=6 size=200 ttl=63
+  36.25s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  37.74s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  37.74s S7  CUSTOMER_RATE     cust=21 pkts=123 kB=123
+  37.20s S7  RAW_SAMPLE        10.28.45.122 -> 10.28.6.253 proto=6 size=1000 ttl=63
+  37.21s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  37.22s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  37.23s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.251 proto=6 size=200 ttl=63
+  37.25s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.13 proto=6 size=200 ttl=63
+  35.70s S4  FLOW_LOSS         9->255 entered=124 left=0 dups=0
+  35.70s S4  FLOW_LOSS         20->255 entered=1474 left=0 dups=0
+  35.70s S4  FLOW_LOSS         255->255 entered=0 left=438 dups=0
+  35.70s S4  FLOW_LOSS         255->20 entered=0 left=1629 dups=0
+  35.70s S4  CUSTOMER_PROFILE  cust=9 avg_size=64B udp=100% idle=0% rate_bucket=5 burst_cv=0.19 ttl<60=100% <30=100% <10=100% ack=0%
+  35.70s S4  CUSTOMER_PROFILE  cust=20 avg_size=200B udp=100% idle=0% rate_bucket=9 burst_cv=0.00 ttl<60=0% <30=0% <10=0% ack=0%
+  35.70s S4  BUDGET_STATS      events_lost=1 reports_refused=2
+  35.70s S4  HEARTBEAT         records_originated=2 events_lost_est=1
+  35.70s S4  TOP_TALKER        cust=20 share=97%
+  36.72s S4  CUSTOMER_RATE     cust=9 pkts=25 kB=1
+  36.72s S4  CUSTOMER_RATE     cust=20 pkts=295 kB=59
+  35.42s S4  RAW_SAMPLE        10.31.43.205 -> 10.42.152.27 proto=17 size=200 ttl=63
+  36.72s S4  RAW_KEEPALIVE     port=0 peer=S3 delay=0.5ms
+  36.72s S4  RAW_KEEPALIVE     port=1 peer=S9 delay=0.5ms
+  38.76s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
+  38.76s S7  CUSTOMER_RATE     cust=15 pkts=80 kB=80
+  38.76s S7  CUSTOMER_RATE     cust=16 pkts=163 kB=163
+  38.76s S7  PORT_STATS        peer=255 drops=0 kB_out=16 ka_lost=2
+  38.76s S7  PORT_STATS        peer=255 drops=0 kB_out=730 ka_lost=0
+  37.74s S1  BUDGET_STATS      events_lost=1 reports_refused=24
+  37.74s S1  HEARTBEAT         records_originated=33 events_lost_est=1
+  37.84s S2  BUDGET_STATS      events_lost=2 reports_refused=10
+  37.84s S2  HEARTBEAT         records_originated=10 events_lost_est=2
+  37.74s S2  CUSTOMER_RATE     cust=24 pkts=48 kB=9
+  37.74s S2  CUSTOMER_RATE     cust=25 pkts=6 kB=1
+  37.44s S2  RAW_SAMPLE        10.28.6.55 -> 10.28.45.119 proto=6 size=100 ttl=63
+  37.44s S2  RAW_SAMPLE        10.42.152.27 -> 10.31.43.205 proto=17 size=200 ttl=63
+  38.20s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  38.21s S7  RAW_SAMPLE        10.28.45.228 -> 10.28.6.40 proto=6 size=1000 ttl=63
+  38.22s S7  RAW_SAMPLE        10.28.45.24 -> 10.28.6.12 proto=6 size=1000 ttl=63
+  38.23s S7  RAW_SAMPLE        10.28.45.119 -> 10.28.6.55 proto=6 size=1000 ttl=63
+  38.25s S7  RAW_SAMPLE        10.50.151.8 -> 10.46.84.212 proto=6 size=200 ttl=63
+  39.37s S7  PORT_STATS        peer=2 drops=0 kB_out=295 ka_lost=0
+  39.37s S7  PORT_STATS        peer=255 drops=0 kB_out=8 ka_lost=1
+  39.37s S7  PORT_STATS        peer=255 drops=0 kB_out=7 ka_lost=0
+  39.37s S7  PORT_STATS        peer=255 drops=0 kB_out=218 ka_lost=0
+  39.37s S7  FLOW_LOSS         255->255 entered=5182 left=0 dups=0
+  39.37s S7  FLOW_LOSS         10->255 entered=115 left=0 dups=0
+  39.37s S7  FLOW_LOSS         15->255 entered=287 left=0 dups=0
+  39.37s S7  FLOW_LOSS         16->255 entered=585 left=0 dups=0
+  39.37s S7  FLOW_LOSS         17->255 entered=172 left=0 dups=0
+  39.37s S7  FLOW_LOSS         21->255 entered=406 left=0 dups=0
+  39.37s S7  FLOW_LOSS         255->255 entered=0 left=3294 dups=0
+  39.37s S7  FLOW_LOSS         255->10 entered=0 left=115 dups=0
+  39.37s S7  FLOW_LOSS         255->15 entered=0 left=287 dups=0
+  39.37s S7  FLOW_LOSS         255->16 entered=0 left=586 dups=0
+  39.37s S7  FLOW_LOSS         255->17 entered=0 left=172 dups=0
+  39.37s S7  FLOW_LOSS         255->21 entered=0 left=406 dups=0
+  39.37s S7  BUDGET_STATS      events_lost=71 reports_refused=0
+  39.37s S7  HEARTBEAT         records_originated=38 events_lost_est=71
+  39.37s S7  EXT               DELIVERY origin=S0 reports=3 records=9 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S1 reports=7 records=31 duplicate_copies=1
+  39.37s S7  EXT               DELIVERY origin=S2 reports=2 records=15 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S3 reports=1 records=1 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S4 reports=3 records=22 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S5 reports=1 records=4 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S6 reports=2 records=23 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S8 reports=18 records=229 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S9 reports=2 records=12 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S10 reports=1 records=7 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S11 reports=1 records=8 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=S13 reports=3 records=12 duplicate_copies=1
+  39.37s S7  EXT               DELIVERY origin=S14 reports=2 records=7 duplicate_copies=0
+  39.37s S7  EXT               DELIVERY origin=all reports=46 records=380 duplicate_copies=2
+  38.55s S9  BUDGET_STATS      events_lost=0 reports_refused=3
+  38.55s S9  HEARTBEAT         records_originated=3 events_lost_est=0
+  38.76s S9  RAW_KEEPALIVE     port=0 peer=S4 delay=0.5ms
+  38.76s S9  RAW_KEEPALIVE     port=1 peer=S8 delay=0.5ms
+  38.76s S9  RAW_KEEPALIVE     port=2 peer=S14 delay=0.5ms
+  39.78s S7  LINK_QUALITY      peer=S255 loss=10% delay=0.0ms
