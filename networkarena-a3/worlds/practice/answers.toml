@@ -1,0 +1,243 @@
+# The A3 practice runs and their answers: for each, whether its egg
+# is on, and the load to run it at; then the practice truth runs, in
+# which every egg is on. Generated: do not edit.
+
+[[egg]]
+n = 21
+name = "The broken link"
+category = "Failure"
+
+[[egg]]
+n = 22
+name = "The long pause"
+category = "Customer"
+
+[[egg]]
+n = 23
+name = "The scanner"
+category = "Traffic"
+
+[[run]]
+egg = 21
+run = 1
+on = false
+load = 1.0
+world = "egg21/run01.toml"
+
+[[run]]
+egg = 21
+run = 2
+on = true
+load = 1.25
+world = "egg21/run02.toml"
+
+[[run]]
+egg = 21
+run = 3
+on = false
+load = 1.25
+world = "egg21/run03.toml"
+
+[[run]]
+egg = 21
+run = 4
+on = true
+load = 1.5
+world = "egg21/run04.toml"
+
+[[run]]
+egg = 21
+run = 5
+on = false
+load = 1.0
+world = "egg21/run05.toml"
+
+[[run]]
+egg = 21
+run = 6
+on = true
+load = 1.5
+world = "egg21/run06.toml"
+
+[[run]]
+egg = 21
+run = 7
+on = true
+load = 1.0
+world = "egg21/run07.toml"
+
+[[run]]
+egg = 21
+run = 8
+on = false
+load = 1.25
+world = "egg21/run08.toml"
+
+[[run]]
+egg = 21
+run = 9
+on = false
+load = 1.0
+world = "egg21/run09.toml"
+
+[[run]]
+egg = 21
+run = 10
+on = true
+load = 1.5
+world = "egg21/run10.toml"
+
+[[run]]
+egg = 22
+run = 1
+on = false
+load = 1.25
+world = "egg22/run01.toml"
+
+[[run]]
+egg = 22
+run = 2
+on = true
+load = 1.0
+world = "egg22/run02.toml"
+
+[[run]]
+egg = 22
+run = 3
+on = true
+load = 1.5
+world = "egg22/run03.toml"
+
+[[run]]
+egg = 22
+run = 4
+on = false
+load = 1.0
+world = "egg22/run04.toml"
+
+[[run]]
+egg = 22
+run = 5
+on = true
+load = 1.25
+world = "egg22/run05.toml"
+
+[[run]]
+egg = 22
+run = 6
+on = false
+load = 1.0
+world = "egg22/run06.toml"
+
+[[run]]
+egg = 22
+run = 7
+on = false
+load = 1.25
+world = "egg22/run07.toml"
+
+[[run]]
+egg = 22
+run = 8
+on = true
+load = 1.5
+world = "egg22/run08.toml"
+
+[[run]]
+egg = 22
+run = 9
+on = false
+load = 1.5
+world = "egg22/run09.toml"
+
+[[run]]
+egg = 22
+run = 10
+on = true
+load = 1.0
+world = "egg22/run10.toml"
+
+[[run]]
+egg = 23
+run = 1
+on = false
+load = 1.25
+world = "egg23/run01.toml"
+
+[[run]]
+egg = 23
+run = 2
+on = true
+load = 1.5
+world = "egg23/run02.toml"
+
+[[run]]
+egg = 23
+run = 3
+on = true
+load = 1.0
+world = "egg23/run03.toml"
+
+[[run]]
+egg = 23
+run = 4
+on = true
+load = 1.25
+world = "egg23/run04.toml"
+
+[[run]]
+egg = 23
+run = 5
+on = true
+load = 1.0
+world = "egg23/run05.toml"
+
+[[run]]
+egg = 23
+run = 6
+on = false
+load = 1.5
+world = "egg23/run06.toml"
+
+[[run]]
+egg = 23
+run = 7
+on = false
+load = 1.0
+world = "egg23/run07.toml"
+
+[[run]]
+egg = 23
+run = 8
+on = false
+load = 1.5
+world = "egg23/run08.toml"
+
+[[run]]
+egg = 23
+run = 9
+on = true
+load = 1.25
+world = "egg23/run09.toml"
+
+[[run]]
+egg = 23
+run = 10
+on = false
+load = 1.0
+world = "egg23/run10.toml"
+
+[[truth]]
+run = "A"
+load = 1.0
+world = "truth/run-a.toml"
+
+[[truth]]
+run = "B"
+load = 1.25
+world = "truth/run-b.toml"
+
+[[truth]]
+run = "C"
+load = 1.5
+world = "truth/run-c.toml"

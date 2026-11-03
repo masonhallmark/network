@@ -1,0 +1,190 @@
+# A3 practice run: egg 23 (The scanner), run 4 of 10. Generated: do
+# not edit. The answer is in answers.toml. Load 1.25.
+[world]
+name = "a3-practice-e23-r04"
+seed = 2304
+version = 1
+family = "harness"
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 0.0
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+
+[[switch]]
+id = 1
+
+[[switch]]
+id = 2
+
+[[switch]]
+id = 3
+
+[[switch]]
+id = 4
+
+[[switch]]
+id = 5
+
+[[link]]
+a = 0
+b = 1
+
+[[link]]
+a = 1
+b = 2
+
+[[link]]
+a = 0
+b = 3
+
+[[link]]
+a = 1
+b = 4
+
+[[link]]
+a = 1
+b = 5
+
+[[link]]
+a = 2
+b = 5
+
+[[link]]
+a = 3
+b = 4
+
+[[link]]
+a = 4
+b = 5
+
+[[app]]
+id = 103
+switch = 2
+prefix = "10.55.111.0/24"
+hosts = [33]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.29
+peer = 102
+size_bytes = 200
+
+[[app]]
+id = 106
+switch = 4
+prefix = "10.34.192.0/24"
+hosts = [82]
+name = "Amazon (shoppers)"
+preset = "amazon"
+rate_mbps = 1.23
+peer = 107
+on_ms = 8000
+off_ms = 8000
+start_ms = 0
+
+[[app]]
+id = 104
+switch = 3
+prefix = "10.48.131.0/24"
+hosts = [147]
+name = "Steam"
+preset = "steam"
+peer = 105
+
+[[app]]
+id = 107
+switch = 2
+prefix = "10.12.51.0/24"
+hosts = [221]
+name = "Amazon (shoppers)'s peer"
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.44.75.0/24"
+hosts = [4]
+name = "Spotify"
+preset = "netflix"
+law = "aimd"
+rate_mbps = 1.68
+peer = 101
+
+[[app]]
+id = 101
+switch = 5
+prefix = "10.18.50.0/24"
+hosts = [178]
+name = "Spotify's peer"
+
+[[app]]
+id = 108
+switch = 2
+prefix = "10.57.43.0/24"
+name = "Jane Street"
+preset = "jane_street"
+rate_mbps = 0.08
+peer = 109
+size_bytes = 200
+hosts = [216, 110, 250]
+
+[[app]]
+id = 102
+switch = 0
+prefix = "10.51.100.0/24"
+hosts = [218]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.29
+peer = 103
+size_bytes = 200
+
+[[app]]
+id = 109
+switch = 3
+prefix = "10.31.103.0/24"
+hosts = [59]
+name = "Jane Street's peer"
+
+[[app]]
+id = 105
+switch = 4
+prefix = "10.40.52.0/24"
+hosts = [203]
+name = "Steam's peer"
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[observe]
+punt_events_per_s = 80
+punt_backlog = 64
+export_bytes_per_s = 16000
+export_burst_bytes = 8000
+
+[harness]
+keepalive_ms = 100
+log_cap_bytes = 16384
+
+
+[[plant]]
+kind = "scan"
+app = 106
+to = 101
+start_ms = 15500
+for_ms = 4000
+addresses = 50
+size_bytes = 60
+
+[[egg]]
+n = 23
+on = true
+app = 106

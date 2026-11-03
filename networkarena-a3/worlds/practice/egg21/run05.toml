@@ -1,0 +1,189 @@
+# A3 practice run: egg 21 (The broken link), run 5 of 10. Generated: do
+# not edit. The answer is in answers.toml. Load 1.0.
+[world]
+name = "a3-practice-e21-r05"
+seed = 2105
+version = 1
+family = "harness"
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 0.0
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+
+[[switch]]
+id = 1
+
+[[switch]]
+id = 2
+
+[[switch]]
+id = 3
+
+[[switch]]
+id = 4
+
+[[switch]]
+id = 5
+
+[[link]]
+a = 0
+b = 1
+
+[[link]]
+a = 1
+b = 2
+
+[[link]]
+a = 0
+b = 3
+
+[[link]]
+a = 1
+b = 4
+
+[[link]]
+a = 1
+b = 5
+
+[[link]]
+a = 2
+b = 5
+
+[[link]]
+a = 3
+b = 4
+
+[[link]]
+a = 4
+b = 5
+
+[[app]]
+id = 102
+switch = 0
+prefix = "10.40.230.0/24"
+hosts = [153]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.25
+peer = 103
+size_bytes = 200
+
+[[app]]
+id = 108
+switch = 2
+prefix = "10.44.252.0/24"
+name = "Jane Street"
+preset = "jane_street"
+rate_mbps = 0.10
+peer = 109
+size_bytes = 200
+hosts = [39, 26, 5]
+
+[[app]]
+id = 103
+switch = 2
+prefix = "10.46.197.0/24"
+hosts = [56]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.33
+peer = 102
+size_bytes = 200
+
+[[app]]
+id = 106
+switch = 4
+prefix = "10.49.4.0/24"
+hosts = [182]
+name = "Amazon (shoppers)"
+preset = "amazon"
+rate_mbps = 0.98
+peer = 107
+on_ms = 8000
+off_ms = 8000
+start_ms = 0
+
+[[app]]
+id = 109
+switch = 3
+prefix = "10.50.142.0/24"
+hosts = [247]
+name = "Jane Street's peer"
+
+[[app]]
+id = 107
+switch = 2
+prefix = "10.30.220.0/24"
+hosts = [187]
+name = "Amazon (shoppers)'s peer"
+
+[[app]]
+id = 105
+switch = 4
+prefix = "10.49.138.0/24"
+hosts = [253]
+name = "Steam's peer"
+
+[[app]]
+id = 101
+switch = 5
+prefix = "10.34.58.0/24"
+hosts = [130]
+name = "Spotify's peer"
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.33.209.0/24"
+hosts = [67]
+name = "Spotify"
+preset = "netflix"
+law = "aimd"
+rate_mbps = 2.45
+peer = 101
+
+[[app]]
+id = 104
+switch = 3
+prefix = "10.60.90.0/24"
+hosts = [15]
+name = "Steam"
+preset = "steam"
+peer = 105
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[observe]
+punt_events_per_s = 80
+punt_backlog = 64
+export_bytes_per_s = 16000
+export_burst_bytes = 8000
+
+[harness]
+keepalive_ms = 100
+log_cap_bytes = 16384
+
+
+[[plant]]
+kind = "fail"
+a = 1
+b = 2
+at_ms = 10800
+for_ms = 5000
+
+[[egg]]
+n = 21
+on = false
+a = 1
+b = 2

@@ -1,0 +1,191 @@
+# A3 practice run: egg 23 (The scanner), run 1 of 10. Generated: do
+# not edit. The answer is in answers.toml. Load 1.25.
+[world]
+name = "a3-practice-e23-r01"
+seed = 2301
+version = 1
+family = "harness"
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 0.0
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+
+[[switch]]
+id = 1
+
+[[switch]]
+id = 2
+
+[[switch]]
+id = 3
+
+[[switch]]
+id = 4
+
+[[switch]]
+id = 5
+
+[[link]]
+a = 0
+b = 1
+
+[[link]]
+a = 1
+b = 2
+
+[[link]]
+a = 0
+b = 3
+
+[[link]]
+a = 1
+b = 4
+
+[[link]]
+a = 1
+b = 5
+
+[[link]]
+a = 2
+b = 5
+
+[[link]]
+a = 3
+b = 4
+
+[[link]]
+a = 4
+b = 5
+
+[[app]]
+id = 101
+switch = 5
+prefix = "10.40.67.0/24"
+hosts = [164]
+name = "Spotify's peer"
+
+[[app]]
+id = 102
+switch = 0
+prefix = "10.15.231.0/24"
+hosts = [123]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.25
+peer = 103
+size_bytes = 200
+
+[[app]]
+id = 104
+switch = 3
+prefix = "10.16.255.0/24"
+hosts = [80]
+name = "Steam"
+preset = "steam"
+peer = 105
+
+[[app]]
+id = 108
+switch = 2
+prefix = "10.12.213.0/24"
+name = "Jane Street"
+preset = "jane_street"
+rate_mbps = 0.12
+peer = 109
+size_bytes = 200
+hosts = [236, 86, 213]
+
+[[app]]
+id = 103
+switch = 2
+prefix = "10.32.190.0/24"
+hosts = [201]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.27
+peer = 102
+size_bytes = 200
+
+[[app]]
+id = 107
+switch = 2
+prefix = "10.47.134.0/24"
+hosts = [67]
+name = "Amazon (shoppers)'s peer"
+
+[[app]]
+id = 105
+switch = 4
+prefix = "10.17.100.0/24"
+hosts = [24]
+name = "Steam's peer"
+
+[[app]]
+id = 109
+switch = 3
+prefix = "10.60.164.0/24"
+hosts = [14]
+name = "Jane Street's peer"
+
+[[app]]
+id = 106
+switch = 4
+prefix = "10.40.123.0/24"
+hosts = [44]
+name = "Amazon (shoppers)"
+preset = "amazon"
+rate_mbps = 1.16
+peer = 107
+on_ms = 8000
+off_ms = 8000
+start_ms = 0
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.22.141.0/24"
+hosts = [182]
+name = "Spotify"
+preset = "netflix"
+law = "aimd"
+rate_mbps = 1.76
+peer = 101
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[observe]
+punt_events_per_s = 80
+punt_backlog = 64
+export_bytes_per_s = 16000
+export_burst_bytes = 8000
+
+[harness]
+keepalive_ms = 100
+log_cap_bytes = 16384
+
+
+[[plant]]
+kind = "scan"
+app = 106
+to = 101
+start_ms = 14100
+for_ms = 4000
+addresses = 3
+each = 20
+size_bytes = 60
+
+[[egg]]
+n = 23
+on = false
+app = 106

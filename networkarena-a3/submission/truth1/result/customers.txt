@@ -1,0 +1,53 @@
+10.3.164.0/24  Jane Street
+10.30.171.0/24  Dropbox
+10.36.149.0/24  Amazon (shoppers)'s peer
+10.11.144.0/24  Amazon (Prime member)'s peer
+10.42.31.0/24  Sync's peer
+10.29.156.200/32  Amazon (Prime member)
+10.53.189.0/24  Ping's peer
+10.44.205.0/24  Akamai users
+10.1.81.0/24  Dropbox's peer
+10.50.151.0/24  Fastly
+10.36.62.0/24  Offsite's peer
+10.28.45.0/24  Cloudflare
+10.41.47.0/24  Akamai
+10.62.20.0/24  Dropbox's peer
+10.37.18.0/24  Ledger
+10.29.156.0/24  Amazon (shoppers)
+10.62.186.0/24  Ledger's peer
+10.20.220.0/24  Mapper
+10.17.72.200/32  Netflix live
+10.13.43.0/24  Zoom
+10.17.72.0/24  Netflix
+10.31.43.0/24  Fortnite
+10.6.79.0/24  Dropbox
+10.11.81.0/24  Ping
+10.31.218.0/24  Backup's peer
+10.11.92.0/24  Login
+10.27.61.0/24  Netflix's peer
+10.59.113.0/24  Cam-A's peer
+10.8.134.0/24  Backup
+10.42.152.200/32  Fortnite player
+10.17.224.0/24  Cam-B's peer
+10.26.254.0/24  Netflix live's viewers
+10.42.152.0/24  Fortnite
+10.19.251.0/24  Cam-B
+10.45.163.0/24  Sync
+10.23.92.0/24  Sync
+10.27.6.0/24  Amazon (shoppers)'s peer
+10.40.113.0/24  Steam's peer
+10.53.116.0/24  Sync's peer
+10.56.26.0/24  Jane Street's peer
+10.47.124.0/24  Dropbox-2's peer
+10.62.116.0/24  Offsite
+10.28.235.0/24  Steam
+10.27.60.0/24  Vault
+10.31.27.0/24  Cam-A
+10.22.59.0/24  Login
+10.22.154.0/24  Zoom
+10.28.6.0/24  Cloudflare users
+10.5.178.0/24  Dropbox-2
+10.46.84.0/24  Home users
+10.34.207.0/24  Amazon (shoppers)
+10.26.92.0/24  Vault's peer
+10.23.169.0/24  Mapper's target

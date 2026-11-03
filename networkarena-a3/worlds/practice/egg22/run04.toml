@@ -1,0 +1,187 @@
+# A3 practice run: egg 22 (The long pause), run 4 of 10. Generated: do
+# not edit. The answer is in answers.toml. Load 1.0.
+[world]
+name = "a3-practice-e22-r04"
+seed = 2204
+version = 1
+family = "harness"
+
+[params]
+link_capacity_mbps = 10
+link_latency_us = 500
+queue_capacity_bytes = 40000
+warmup_ms = 3000
+duration_ms = 40000
+delivery_floor_pct = 0.0
+packet_size_bytes = 1000
+control_delay_us = 2000
+
+[[switch]]
+id = 0
+
+[[switch]]
+id = 1
+
+[[switch]]
+id = 2
+
+[[switch]]
+id = 3
+
+[[switch]]
+id = 4
+
+[[switch]]
+id = 5
+
+[[link]]
+a = 0
+b = 1
+
+[[link]]
+a = 1
+b = 2
+
+[[link]]
+a = 0
+b = 3
+
+[[link]]
+a = 1
+b = 4
+
+[[link]]
+a = 1
+b = 5
+
+[[link]]
+a = 2
+b = 5
+
+[[link]]
+a = 3
+b = 4
+
+[[link]]
+a = 4
+b = 5
+
+[[app]]
+id = 100
+switch = 0
+prefix = "10.33.178.0/24"
+hosts = [247]
+name = "Spotify"
+preset = "netflix"
+law = "aimd"
+rate_mbps = 1.72
+peer = 101
+
+[[app]]
+id = 103
+switch = 2
+prefix = "10.55.175.0/24"
+hosts = [73]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.25
+peer = 102
+size_bytes = 200
+
+[[app]]
+id = 105
+switch = 4
+prefix = "10.22.252.0/24"
+hosts = [120]
+name = "Steam's peer"
+
+[[app]]
+id = 104
+switch = 3
+prefix = "10.21.202.0/24"
+hosts = [93]
+name = "Steam"
+preset = "steam"
+peer = 105
+
+[[app]]
+id = 107
+switch = 2
+prefix = "10.15.86.0/24"
+hosts = [60]
+name = "Amazon (shoppers)'s peer"
+
+[[app]]
+id = 106
+switch = 4
+prefix = "10.24.168.0/24"
+hosts = [119]
+name = "Amazon (shoppers)"
+preset = "amazon"
+rate_mbps = 1.10
+peer = 107
+on_ms = 8000
+off_ms = 8000
+start_ms = 0
+
+[[app]]
+id = 102
+switch = 0
+prefix = "10.33.2.0/24"
+hosts = [11]
+name = "Fortnite"
+preset = "fortnite"
+rate_mbps = 0.25
+peer = 103
+size_bytes = 200
+
+[[app]]
+id = 108
+switch = 2
+prefix = "10.8.35.0/24"
+name = "Jane Street"
+preset = "jane_street"
+rate_mbps = 0.11
+peer = 109
+size_bytes = 200
+hosts = [15, 95, 231]
+
+[[app]]
+id = 109
+switch = 3
+prefix = "10.54.36.0/24"
+hosts = [64]
+name = "Jane Street's peer"
+
+[[app]]
+id = 101
+switch = 5
+prefix = "10.6.126.0/24"
+hosts = [250]
+name = "Spotify's peer"
+
+[workload]
+kind = "mixed"
+size_bytes = 1000
+
+[observe]
+punt_events_per_s = 80
+punt_backlog = 64
+export_bytes_per_s = 16000
+export_burst_bytes = 8000
+
+[harness]
+keepalive_ms = 100
+log_cap_bytes = 16384
+
+
+[[plant]]
+kind = "pause"
+app = 104
+at_ms = 10300
+for_ms = 10000
+
+[[egg]]
+n = 22
+on = false
+app = 100
